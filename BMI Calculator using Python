@@ -1,0 +1,19 @@
+height = input("Enter your height")
+
+weight = input("Enter your weight")
+
+h = float(height)
+w = float(weight)
+
+bmi = w / ((h / 100 ) ** 2)
+print(bmi)
+
+if bmi < 19:
+
+    print(f"Your bmi value is {bmi},you are under weight.")
+elif bmi <= 25:
+    print(f"Your bmi value is {bmi},you are healthy.")
+elif bmi <= 45:
+    print(f"Your bmi value is {bmi},you are little obese but good health.")
+else:
+    print(f"Your bmi value is {bmi},you are obese,take a health diet.")
