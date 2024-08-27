@@ -1,0 +1,10 @@
+from IPython.display import Audio ,display
+
+print("select one of the following\n 1. happy \n 2. sad \n 3. dance")
+main_dir = r"C:\Users\shire\OneDrive\Desktop\SONGS"
+sub_dir = input("enter your mood")
+select_emotion = os.path.join(main_dir,sub_dir)
+random.shuffle(final:=os.listdir(select_emotion) )
+
+for song in final[:3]:
+    display(Audio(os.path.join(main_dir,sub_dir,song)))
