@@ -1,0 +1,25 @@
+import wikipedia as wiki
+import warnings as w
+
+def get_data():
+    w.filterwarnings("ignore")
+    try:
+        search_text = input("Enter the topic you want to search for: ")
+        obj = wiki.page(search_text)
+        
+        print("\nTITLE: ", obj.title, "\n")
+        print("SUMMARY: ", obj.summary)
+        print("URL : ", obj.url, "\n")
+        
+        print("IMAGES : \n")
+        images = obj.images
+        if len(images) > 0:
+            for img in images:
+                print(img)
+        else:
+            print("There are no images for this topic.")
+            
+    except Exception as e:
+        print("MESSAGE: Your search is equivocal, make sure to enter a proper search term.")
+
+get_data()
